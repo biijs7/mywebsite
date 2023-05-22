@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+/* Test commit */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #121619;
+  color: white;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Header */
+.top-nav {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+
+.top-nav > div {
+  place-self: center;
+  border-right: 1px solid white;
+  transition: background 0.4s;
+}
+
+.top-nav div:not(:first-child):hover {
+  background: teal;
+}
+.top-nav > div:first-child {
+  border-right: none;
+}
+
+.top-nav > div a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  line-height: 40px;
+  padding: 40px 40px;
+}
+
+
+
+.top-nav img {
+  width: 140px;
+  height: auto;
+}
+
+
+/* Landing Section */
+section.landing {
+  position: relative;
+  height: 350px;
+  border-top: 2px solid white;
+  background: coral;
+  background-image: url('img/turkey-8.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+section.landing p {
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 2px 5px 3px rgb(37, 37, 37);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+/* Content Section */
+div.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 4rem;
+  margin-top: 50px;
+  font-size: 14px;
+  justify-items: center;
+}
+
+div.content h3 {
+  padding: 1rem;
+  padding-left: 0;
+  border-bottom: 1px solid white;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+
+div.content div:first-child {
+  margin-left: 4rem;
+}
+
+div.content div:last-child {
+  margin-right: 4rem;
+}
+
+div.content a {
+  display: block;
+  margin-top: 2rem;
+  font-size: 14px;
+  color: #0fb726;
+  text-align: right;
+}
+
+/* Footer */
+footer {
+  background: #111213;
+  margin-top: 200px;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+
+
+/* For Mobile Screen */
+@media screen and (max-width: 600px) {
+  .top-nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px;
+    margin-top: 20px;
+  }
+  
+ .top-nav div {
+   display: block;
+   width: 100%;
+   text-align: center;
+   margin: 0 auto;
+ }
+
+ .top-nav div a{
+   text-transform: uppercase;
+  line-height: 4rem;
+  font-size: 1rem;
+}
+
+.top-nav > div {
+  border: none;
+}
+
+
+section.landing p {
+  font-size: 1.2rem;
+  text-shadow: 2px 5px 3px rgb(37, 37, 37);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: end:
+}
+
+
+
+div.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 50px;
+  font-size: 14px;
+  justify-content: center;
+}
+
+div.content div:first-child {
+  margin-left: 50px;
+}
+
+div.content div {
+  margin: 30px 50px;
+}
+
+
+div.content h3 {
+  border-bottom: 1px solid white;
+  margin-bottom: 30px;
+  letter-spacing: 1.4px;
+  word-spacing: 4px;
+}
